@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
-// import ReduxProvider from "@/redux/ReduxProvider";
+import ReduxProvider from "@/redux/ReduxProvider";
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  // children,
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -29,10 +29,9 @@ export default function RootLayout({
         <body
           className={`antialiased`}
         >
-          {/* <ReduxProvider> */}
-            {/* {children} */}
-            <h1>Hello</h1>
-          {/* </ReduxProvider> */}
+          <ReduxProvider>
+            {children}
+          </ReduxProvider>
         </body>
       </html>
   );
