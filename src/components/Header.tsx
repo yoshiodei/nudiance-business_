@@ -10,7 +10,6 @@ export default function Header() {
     <div className="bg-primary h-[10vh] px-5">
       <div className="w-full h-full flex items-center">
         <button
-          // onClick={() => router.push('/home')}
         >
           <Image 
             className="w-auto 2xl:h-[6.5vh] xl:h-[6.5vh] h-[5.5vh]"
